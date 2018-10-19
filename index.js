@@ -3,6 +3,14 @@ const linkApi = 'https://api.github.com/'
 const fork = `${userName}/javascript-fetch-lab`
 
 function getIssues(data) {
+  fetch(`${linkApi}repos/${fork}/issues`).
+    then(resp => {
+      resp.json().then( data => {
+        for (let i = 0; i < data.length; i++){
+          displayIssue(new Issue(data[i]));
+        }
+    } )
+  })
 }
 
 function showIssues(json) {
