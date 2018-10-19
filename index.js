@@ -2,7 +2,7 @@ const userName = ''
 const linkApi = 'https://api.github.com/'
 const fork = `${userName}/javascript-fetch-lab`
 
-function getIssues() {
+function getIssues(data) {
 }
 
 function showIssues(json) {
